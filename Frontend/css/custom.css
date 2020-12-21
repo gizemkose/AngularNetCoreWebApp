@@ -1,0 +1,10 @@
+.col-sm-6 {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100% !important;  
+    flex:0 0 100% !important;
+}
+
+.form-control{
+    width: 40% !important;
+}

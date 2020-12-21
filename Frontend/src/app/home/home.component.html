@@ -1,0 +1,40 @@
+﻿<h1 class="text-center">Get Sales</h1>
+<form [formGroup]="getSalesForm" (ngSubmit)="GetSales()">   
+    <div class="form-group ">
+        <label for="storeId">Store Id</label>
+        <input type="number" formControlName="storeId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.storeId.errors }" />
+     
+    </div>   
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Get Sales</button>
+        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>
+<p><a [routerLink]="['/login']">Logout</a></p>
+
+<p-table [value]="saleList">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>OrderDate</th>
+            <th>Address</th>
+            <th>Telephone</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Payment</th>
+            <th>CargoDate</th>            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+        <tr>
+            <td>{{order.name}}</td>
+            <td>{{order.orderDate}}</td>
+            <td>{{order.address}}</td>
+            <td>{{order.telephone}}</td>
+            <td>{{order.productName}}</td>
+            <td>{{order.price}}</td>
+            <td>{{order.cargoPayment}}</td>
+            <td>{{order.cargoDate}}</td>
+        </tr>
+    </ng-template>
+</p-table>
