@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "O:\\Users\\cenap.kip\\.dotnet\\store\\|arch|\\|tfm|",
+      "O:\\Users\\cenap.kip\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ]
+  }
+}
