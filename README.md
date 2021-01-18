@@ -1,7 +1,4 @@
-# StockMountTask
-stockmount web application task.
-
-Task için ayrıntılı bilgiler, ilgili end pointler StockmountAssestment.pdf dosyasında bulunmaktadır. 
+# Simple Web App Tas
 
 #### KURULUM #####
 Backend: VisualStudio
