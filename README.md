@@ -1,4 +1,4 @@
-# Simple Web App Tas
+# Simple Web App Task, .Net Core & Angular
 
 #### KURULUM #####
 Backend: VisualStudio
